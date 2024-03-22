@@ -4,7 +4,6 @@ import Navbar from '../components/Navbar'
 import partners from '../assets/partners.png'
 import Box from '../resusable/Box'
 import google from '../assets/download11-removebg-preview.png'
-import logo from '../assets/Group 25.png'
 
 import { TbMedicalCross } from "react-icons/tb";
 import Footer from '../components/Footer'

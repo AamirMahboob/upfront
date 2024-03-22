@@ -20,7 +20,7 @@ const Hero = ({title,content,buttonTitle,img}) => {
                             {title}
                         </h1>
                         <p className="font-body text-[#03031D] text-base font-normal leading-[1.5625rem] "> {content}</p>
-                        <Button value={buttonTitle} />
+                        <Button isVisible={true} isWhiteText={true} value={buttonTitle} />
                     </div>
                 </div>
                 <div className='w-[50%] flex justify-center items-center'>

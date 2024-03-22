@@ -32,7 +32,7 @@ const Companies = () => {
                             Transform Your Workplace: Embrace the Future
                         </h1>
                         <p className="font-body text-[#03031D] text-base font-normal leading-[1.5625rem] text-left">Unlock your Hr potential with Prepaid insurance, when off-boarding! A coverage plan that lets employers select from a range of perks, improving the workplace for everyone.</p>
-                        <Button value='Request a quote' />
+                        <Button isVisible={true} isWhiteText={true} value='Request a quote' />
                     </div>
                 </div>
                 <div className='w-[50%] '>
@@ -225,7 +225,7 @@ const Companies = () => {
                     <p className='font-body font-500 w-[30rem] text-black text-[1rem]  '>
                         At FairSplit, we specialize in enhancing employee retention through our cost-effective benefits management and comprehensive off-boarding support. Our services are designed to elevate the overall employee experience, making your company an attractive place to work and grow. We provide proactive risk mitigation strategies and tools for informed decision-making, ensuring a stable and positive work environment. With FairSplit, create a workplace culture that not only supports but also values its employees, encouraging them to stay and thrive with your company. Join us in building a more engaged and committed workforce, powered by FairSplit's dedicated employee retention solutions.
                     </p>
-                    <Button value='Request a Quote' />
+                    <Button isVisible={true} isWhiteText={true} value='Request a Quote' />
                 </div>
 
             </div>
@@ -245,34 +245,33 @@ const Companies = () => {
                     <Box />
                  </div>
             </div>
-            <div className='p-20'>
-                <div className='flex flex-row justify-between items-center'> 
-                    <div className='flex flex-col gap-3'>
-                        <p className='font-body text-[18px]'>Support</p>
-                        <p className='font-body text-[18px]'>For Companies</p>
-                        <p className='font-body text-[18px]'>For Channel Partners</p>
-                        <p className='font-body text-[18px]'> Bond</p>
+            <div className=' px-10 py-5 bg-white w-screen ' >
+                <div className='flex flex-row justify-between items-center p-5'> 
+                    <div className='flex flex-col gap-1  '>
+                        <p className='font-body text-[14px] text-black'>Support</p>
+                        <p className='font-body text-[14px] text-black'>For Companies</p>
+                        <p className='font-body text-[14px] text-black'>For Channel Partners</p>
+                        <p className='font-body text-[14px] text-black'> Bond</p>
                     </div>
-                    <div className='flex flex-col gap-3'>
-                    <p className='font-body text-[18px]'>Support</p>
-                        <p className='font-body text-[18px]'>LEGAL</p>
-                        <p className='font-body text-[18px]'> Term of use</p>
-                        <p className='font-body text-[18px]'>FAQS</p>
-                        <p className='font-body text-[18px]'>Privacy Policy</p>
-                        <p className='font-body text-[18px]'>Security</p>
+                    <div className='flex flex-col gap-1 '>
+                    <p className='font-body text-[14px] text-black'>Support</p>
+                        <p className='font-body text-[14px] text-black'>LEGAL</p>
+                        <p className='font-body text-[14px] text-black'> Term of use</p>
+                        <p className='font-body text-[14px] text-black'>FAQS</p>
+                        <p className='font-body text-[14px] text-black'>Privacy Policy</p>
+                        <p className='font-body text-[14px] text-black'>Security</p>
                     </div>
-                    <div className='flex flex-col gap-3'>
-                    <p>Support</p>
-                        <p className='font-body text-[18px]' >Stay in Touch</p>
-                        <p className='font-body text-[18px]'>Linked in</p>
-                        <p className='font-body text-[18px]'>Twitter</p>
+                    <div className='flex flex-col gap-1 '>
+                    <p className='font-body text-[14px] text-black'>Support</p>
+                        <p className='font-body text-[14px] text-blackwhite'>Linked in</p>
+                        <p className='font-body text-[14px] text-black'>Twitter</p>
                         <img src={logo} alt="" width={40} />
                     </div>
                 </div>
-                <hr class="border-gray-800 w-full mt-10 "></hr>
-                <p>© 2024 FairSplit, Inc.</p>
-                <hr class="border-gray-800 w-full mt-20 "></hr>
-                <p className='font-body text-sm mt-3'>
+                <hr class="border-black w-full mt-10  "></hr>
+                <p className='font-body text-black mt-2 text-[16px]' >© 2024 FairSplit, Inc.</p>
+                <hr class="border-black w-full mt-10 "></hr>
+                <p className='font-body text-black text-[14px] mt-3'>
                 Coverage is granted based on underwriting criteria. Not accessible in every state. For complete terms, conditions, and exclusions, please review the policy. The examples provided are merely illustrative. The specific terms of your policy prevail, and exclusions apply. Coverage depends on the precise details leading to a claim. FairSplit Inc. or its associated entities are licensed agencies authorized to sell specific insurance products and may earn commissions from these sales. Only the insurer that issues the policy holds the responsibility for its obligations. For more details, check the [Privacy Policy] section.
                 </p>
             </div>

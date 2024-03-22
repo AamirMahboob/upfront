@@ -13,18 +13,20 @@ const Navbar = () => {
         <nav className=" bg-[#FFFFFF] p-4  mx-10 flex justify-between items-center">
             {/* Logo and Company Name */}
             <div className="flex items-center">
-                <img src={logo} alt="Logo" className="h-8 w-auto" />
+               <a href="/"> <img src={logo} alt="Logo" className="h-8 w-auto" /></a>
             
             </div>
             {/* Navigation Menu */}
             <div className="hidden md:flex space-x-[30px]">
-                <a   className="text-[#03031D] font-bold font-body ">Companies</a>
-                <a   className="text-[#03031D] font-bold font-body">Channel Partner</a>
-                <a   className="text-[#03031D] font-bold font-body">Claims</a>
-                <a   className="text-[#03031D] font-bold font-body ">Bonds</a>
+                <a  href='/companies'  className="text-[#03031D] font-bold font-body ">Companies</a>
+                <a  href='/partners'  className="text-[#03031D] font-bold font-body">Channel Partner</a>
+                <a  href='/aboutus' className="text-[#03031D] font-bold font-body">About us</a>
+
+                {/* <a   className="text-[#03031D] font-bold font-body">Claims</a> */}
+                <a  href='/bonds' className="text-[#03031D] font-bold font-body ">Bonds</a>
             </div>
             <div>
-                 <Button value='join us'/>
+                 <Button isVisible={true} isWhiteText={true} value='join us'/>
             </div>
 
             {/* Mobile Menu Button */}
