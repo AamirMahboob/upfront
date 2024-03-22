@@ -4,6 +4,7 @@ import Navbar from '../components/Navbar'
 import partners from '../assets/partners.png'
 import Box from '../resusable/Box'
 import google from '../assets/download11-removebg-preview.png'
+import { motion } from 'framer-motion'
 
 import { TbMedicalCross } from "react-icons/tb";
 import Footer from '../components/Footer'
@@ -12,6 +13,11 @@ const Partners = () => {
     return (
         <>
             <Navbar />
+            <motion.div
+             initial={{opacity:0}}
+             animate={{opacity: 1}}
+             exit={{opacity:0}}
+            >
             <Hero title='Partner with us' content='Unlock your Hr potential with Prepaid insurance, when off-boarding! A coverage plan that lets employers select from a range of perks, improving the workplace for everyone.'
                 buttonTitle='Request a Quote' img={partners}
             />
@@ -105,6 +111,7 @@ const Partners = () => {
               </div>
             </div>
             <Footer />
+            </motion.div>
 
         </>
     )

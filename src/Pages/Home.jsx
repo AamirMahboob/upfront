@@ -17,21 +17,60 @@ import emp10 from '../assets/emp10.jpeg'
 import FAQ from '../components/FAQ'
 import logo from '../assets/Group 25.png'
 import Box from '../resusable/Box'
+import { easeIn, motion } from 'framer-motion'
 const Home = () => {
     return (
         <>
             <Navbar />
-            <div style={{ backgroundImage: 'linear-gradient(#031c6b, #03045E)' }} className=" bg-[#03045E] relative flex justify-center items-center gap-10 git flex-row w-screen h-[43.625rem]  ">
+            <motion.div
+             initial={{opacity:0}}
+             animate={{opacity: 1}}
+             exit={{opacity:0}}
+            >
+            <div style={{ backgroundImage: 'linear-gradient(#031c6b, #03045E)' }} className=" bg-[#03045E] relative flex justify-center items-center gap-10 flex-row w-screen h-[43.625rem]  ">
                 
                 <div className='flex flex-col w-[40%]'>
-                <h1 className='font-heading text-white font-bold    text-[30px]'>Reorganize: Save 60 Days and Cut Costs by 15%!</h1>
-                <p className="font-body font-normal text-[1.2rem] leading-[2.25rem] text-white"><span className='font-martel-sans font-bold text-[1.2rem] leading-[2.25rem]'>FairSplit Calculator:Upfront</span> <br />
-The Upfront calculator is designed to help companies discern both the costs and value associated with off-boarding payments</p>
+                <motion.h1
+                 initial ={{x:-100,opacity:0}}
+                 animate={{x:0,opacity:1}}
+                 viewport={{once:true}}
+                 transition={{
+                   delay:0.2,
+                   x:{type:'spring',stiffness:60},
+                   opacity:{duration:1},
+                   ease:"easeIn",
+                   duration:1
+                 }}
+                className='font-heading text-white font-bold    text-[30px]'>Reorganize: Save 60 Days and Cut Costs by 15%!</motion.h1>
+                <motion.p 
+                   initial ={{x:-100,opacity:0}}
+                   animate={{x:0,opacity:1}}
+                   viewport={{once:true}}
+                   transition={{
+                     delay:0.3,
+                     x:{type:'spring',stiffness:60},
+                     opacity:{duration:0.6},
+                     ease:"easeIn",
+                     duration:1
+                   }}
+                className="font-body font-normal text-[1.2rem] leading-[2.25rem] text-white"><span className='font-martel-sans font-bold text-[1.2rem] leading-[2.25rem]'>FairSplit Calculator:Upfront</span> <br />
+The Upfront calculator is designed to help companies discern both the costs and value associated with off-boarding payments</motion.p>
 
                 </div>
-                <div style={{ backgroundImage: 'linear-gradient(#03045E,#031c6b)' }} className='w-[45%] h-[35rem]' >
+                <motion.div
+                  initial ={{x:100,opacity:0}}
+                  whileInView={{x:0,opacity:1}}
+                  viewport={{once:true}}
+                  transition={{
+                    delay:0.2,
+                    x:{type:'spring',stiffness:60},
+                    opacity:{duration:1},
+                    ease:"easeIn",
+                    duration:1
+                  }}
+                style={{ backgroundImage: 'linear-gradient(#03045E,#031c6b)' }} className='w-[45%] h-[35rem]' >
 
-                </div>
+                </motion.div>
             </div>
             <Social />
             <div style={{
@@ -45,12 +84,32 @@ The Upfront calculator is designed to help companies discern both the costs and 
                     <h1 className=' text-[#03045E] w-[30.5rem] mt-14 font-medium font-heading text-[1.5rem]' > Off-Boarding Made Personal: Your Company, Our Custom Solution.</h1>
 
                 </div>
-                <img src={dash} width={700} className='absolute top-40 left-[20%]' />
+                <motion.img 
+                   initial={{ opacity: 0, scale: 0.5 }}
+                   whileInView={{ opacity: 1, scale: 1 }}
+                   transition={{
+                     delay: 0.4,
+                     scale: { type: 'spring', stiffness: 100 },
+                     opacity: { duration: 0.5 },
+                     ease: 'easeInOut',
+                   }}
+                src={dash} width={700} className='absolute top-40 left-[20%]' />
             </div>
             <div className='flex justify-center  items-center p-20 bg-white h-[40.625rem] w-[100vw]  mt-44'>
                 <div className='w-[50%] flex flex-col gap-4  '>
                     <div className='flex gap-10 h-[20.625rem]   relative'>
-                        <div style={{
+                        <motion.div
+                         initial ={{x:-50,opacity:0}}
+                         animate={{x:0,opacity:1}}
+                           viewport={{once:true}}
+                         transition={{
+                           delay:0.2,
+                           x:{type:'spring',stiffness:60},
+                           opacity:{duration:1},
+                           ease:"easeIn",
+                           duration:1
+                         }}
+                        style={{
                             backgroundImage: `url(${emp2})`,
                             backgroundSize: 'cover',
                             backgroundPosition: 'center',
@@ -58,8 +117,17 @@ The Upfront calculator is designed to help companies discern both the costs and 
                             overflow: 'hidden',
                             width: '20rem',
                             height: '20rem',
-                        }}></div>
-                        <div style={{
+                        }}></motion.div>
+                        <motion.div
+                          initial={{ opacity: 0, scale: 0.5 }}
+                          whileInView={{ opacity: 1, scale: 1 }}
+                          transition={{
+                            delay: 0.4,
+                            scale: { type: 'spring', stiffness: 100 },
+                            opacity: { duration: 0.5 },
+                            ease: 'easeInOut',
+                          }}
+                        style={{
                             backgroundImage: `url(${emp3})`,
                             backgroundSize: 'cover',
                             backgroundPosition: 'center',
@@ -67,10 +135,19 @@ The Upfront calculator is designed to help companies discern both the costs and 
                             overflow: 'hidden',
                             width: '13rem',
                             height: '13rem',
-                        }} className='bg-black absolute top-28 right-3'></div>
+                        }} className='bg-black absolute top-28 right-3'></motion.div>
                     </div>
                     <div className='flex gap-10 h-[24.625rem]   relative'>
-                        <div style={{
+                        <motion.div
+                          initial={{ opacity: 0, scale: 0.5 }}
+                          whileInView={{ opacity: 1, scale: 1 }}
+                          transition={{
+                            delay: 0.4,
+                            scale: { type: 'spring', stiffness: 100 },
+                            opacity: { duration: 0.5 },
+                            ease: 'easeInOut',
+                          }}
+                        style={{
                             backgroundImage: `url(${emp4})`,
                             backgroundSize: 'cover',
                             backgroundPosition: 'center',
@@ -78,8 +155,19 @@ The Upfront calculator is designed to help companies discern both the costs and 
                             overflow: 'hidden',
                             width: '13rem',
                             height: '13rem',
-                        }}></div>
-                        <div style={{
+                        }}></motion.div>
+                        <motion.div
+                          initial ={{x:50,opacity:0}}
+                          animate={{x:0,opacity:1}}
+                        //    viewport={{once:true}}
+                          transition={{
+                            delay:0.2,
+                            x:{type:'spring',stiffness:60},
+                            opacity:{duration:1},
+                            ease:"easeIn",
+                            duration:1
+                          }}
+                        style={{
                             backgroundImage: `url(${emp5})`,
                             backgroundSize: 'cover',
                             backgroundPosition: 'center',
@@ -87,14 +175,28 @@ The Upfront calculator is designed to help companies discern both the costs and 
                             overflow: 'hidden',
                             width: '18rem',
                             height: '18rem',
-                        }} className='  absolute top-10 right-3'></div>
+                        }} className='  absolute top-10 right-3'></motion.div>
                     </div>
 
 
                 </div>
-                <div className=' flex flex-col  gap-3 w-[50%] p-20'>
-                    <div className='flex gap-8'><TbMedicalCross size={34} color='#03045E' />
-                        <h1 className=' text-[#03045E]    font-medium font-body text-[1rem]'>ABOUT US</h1></div>
+                <motion.div
+                  initial ={{x:100,opacity:0}}
+                  whileInView={{x:0,opacity:1}}
+                  // viewport={{once:true}}
+                  transition={{
+                    delay:0.2,
+                    x:{type:'spring',stiffness:60},
+                    opacity:{duration:1},
+                    ease:"easeIn",
+                    duration:1
+                  }}
+                className=' flex flex-col  gap-3 w-[50%] p-20'>
+                    <div className='flex gap-8'>< TbMedicalCross
+                     size={34} color='#03045E' />
+                        <h1
+                        
+                        className=' text-[#03045E]    font-medium font-body text-[1rem]'>ABOUT US</h1></div>
                     <h1 className='text-black  font-medium font-heading text-[2.5rem] leading-[74.83px]'>FairSplit</h1>
 
 
@@ -105,7 +207,7 @@ The Upfront calculator is designed to help companies discern both the costs and 
                             Tax Optimization: Bypasses Social Security and Medicare tax implications, when off-boarding.</p>
                         <Button isVisible={true} isWhiteText={true} value='Get Started ' />
                     </div>
-                </div>
+                </motion.div>
             </div>
             <div className='bg-[#F2F3F7] w-screen h-[45.625rem] flex justify-center items-center gap-6'>
                 <div
@@ -204,16 +306,36 @@ The Upfront calculator is designed to help companies discern both the costs and 
                    <TbMedicalCross size={30} color='white' />
                    <h1 className='font-heading text-white font-bold    text-[30px]'>OUR PARTNERS</h1>
                   </div>
-                 <div className='flex gap-10 mt-10'>
+                 <motion.div 
+                   
+                  initial={{ opacity: 0, scale: 0.5 }}
+                  whileInView={{ opacity: 1, scale: 1 }}
+                  transition={{
+                    delay: 0.2,
+                    scale: { type: 'spring', stiffness: 100 },
+                    opacity: { duration: 0.5 },
+                    ease: 'easeInOut',
+                  }}
+                 className='flex gap-10 mt-10'>
                     <Box />
                     <Box />
                     <Box />
-                 </div>
-                 <div className='flex gap-10 mt-10'>
+                 </motion.div>
+                 <motion.div 
+                   
+                  initial={{ opacity: 0, scale: 0.5 }}
+                  whileInView={{ opacity: 1, scale: 1 }}
+                  transition={{
+                    delay: 0.4,
+                    scale: { type: 'spring', stiffness: 100 },
+                    opacity: { duration: 0.5 },
+                    ease: 'easeInOut',
+                  }}
+                 className='flex gap-10 mt-10'>
                     <Box />
                     <Box />
                     <Box />
-                 </div>
+                 </motion.div>
             </div>
             <div className=' px-10 py-5 bg-white w-screen ' >
                 <div className='flex flex-row justify-between items-center p-5'> 
@@ -245,6 +367,7 @@ The Upfront calculator is designed to help companies discern both the costs and 
                 Coverage is granted based on underwriting criteria. Not accessible in every state. For complete terms, conditions, and exclusions, please review the policy. The examples provided are merely illustrative. The specific terms of your policy prevail, and exclusions apply. Coverage depends on the precise details leading to a claim. FairSplit Inc. or its associated entities are licensed agencies authorized to sell specific insurance products and may earn commissions from these sales. Only the insurer that issues the policy holds the responsibility for its obligations. For more details, check the [Privacy Policy] section.
                 </p>
             </div>
+             </motion.div>
         </>
     )
 }

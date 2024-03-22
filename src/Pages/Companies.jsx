@@ -14,10 +14,17 @@ import logo from '../assets/Group 25.png'
 import b7 from '../assets/ b7.png'
 import { TbMedicalCross } from "react-icons/tb";
 import Box from '../resusable/Box'
+import { motion } from 'framer-motion'
+
 const Companies = () => {
     return (
         <>
             <Navbar />
+            <motion.div
+             initial={{opacity:0}}
+             animate={{opacity: 1}}
+             exit={{opacity:0}}
+            >
             <div style={{ background: 'linear-gradient(180deg, rgba(0, 180, 216, 0.15) 0%, rgba(255, 255, 255, 0.3) 64.06%)' }} className=" relative flex flex-row w-screen h-[40.625rem]  ">
                 <div className='w-[50%] flex flex-col p-10'>
                     <div style={{
@@ -275,6 +282,7 @@ const Companies = () => {
                 Coverage is granted based on underwriting criteria. Not accessible in every state. For complete terms, conditions, and exclusions, please review the policy. The examples provided are merely illustrative. The specific terms of your policy prevail, and exclusions apply. Coverage depends on the precise details leading to a claim. FairSplit Inc. or its associated entities are licensed agencies authorized to sell specific insurance products and may earn commissions from these sales. Only the insurer that issues the policy holds the responsibility for its obligations. For more details, check the [Privacy Policy] section.
                 </p>
             </div>
+            </motion.div>
             
  
         </>
