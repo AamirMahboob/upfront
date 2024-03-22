@@ -21,9 +21,17 @@ const Home = () => {
     return (
         <>
             <Navbar />
-            <div style={{ backgroundImage: 'linear-gradient(#031c6b, #03045E)' }} className=" bg-[#03045E] relative flex flex-row w-screen h-[35.625rem]  ">
+            <div style={{ backgroundImage: 'linear-gradient(#031c6b, #03045E)' }} className=" bg-[#03045E] relative flex justify-center items-center gap-10 git flex-row w-screen h-[43.625rem]  ">
+                
+                <div className='flex flex-col w-[40%]'>
+                <h1 className='font-heading text-white font-bold    text-[30px]'>Reorganize: Save 60 Days and Cut Costs by 15%!</h1>
+                <p className="font-body font-normal text-[1.2rem] leading-[2.25rem] text-white"><span className='font-martel-sans font-bold text-[1.2rem] leading-[2.25rem]'>FairSplit Calculator:Upfront</span> <br />
+The Upfront calculator is designed to help companies discern both the costs and value associated with off-boarding payments</p>
 
+                </div>
+                <div style={{ backgroundImage: 'linear-gradient(#03045E,#031c6b)' }} className='w-[45%] h-[35rem]' >
 
+                </div>
             </div>
             <Social />
             <div style={{
