@@ -1,5 +1,5 @@
 import React from 'react'
-import Charts from '../components/Charts'
+ 
 import Navbar from '../components/Navbar'
 import Footer from '../components/Footer'
 
