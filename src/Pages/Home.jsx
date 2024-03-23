@@ -18,6 +18,7 @@ import FAQ from '../components/FAQ'
 import logo from '../assets/Group 25.png'
 import Box from '../resusable/Box'
 import { easeIn, motion } from 'framer-motion'
+import Calculator from '../components/Calculator'
 const Home = () => {
     return (
         <>
@@ -68,8 +69,8 @@ The Upfront calculator is designed to help companies discern both the costs and 
                     ease:"easeIn",
                     duration:1
                   }}
-                style={{ backgroundImage: 'linear-gradient(#03045E,#031c6b)' }} className='w-[45%] h-[35rem]' >
-
+                style={{ backgroundImage: 'linear-gradient(#03045E,#031c6b)' }} className='w-[45%] flex justify-center items-center h-[40rem]' >
+                     <Calculator />
                 </motion.div>
             </div>
             <Social />
@@ -94,6 +95,7 @@ The Upfront calculator is designed to help companies discern both the costs and 
                      ease: 'easeInOut',
                    }}
                 src={dash} width={700} className='absolute top-40 left-[20%]' />
+                
             </div>
             <div className='flex justify-center  items-center p-20 bg-white h-[40.625rem] w-[100vw]  mt-44'>
                 <div className='w-[50%] flex flex-col gap-4  '>

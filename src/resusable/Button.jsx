@@ -1,8 +1,8 @@
 import React from 'react';
 import {motion} from 'framer-motion'
-const Button = ({ value, isVisible, isWhiteText , }) => {
+const Button = ({ value, isVisible, isWhiteText , style}) => {
     // Conditionally apply classes based on props
-    const buttonClasses = `w-48 h-10 rounded-md  hidden md:block ${isVisible ? 'block' : 'hidden'} ${isWhiteText ? 'bg-[#03045E] text-white' : 'bg-white text-black'}`;
+    const buttonClasses = `w-48 h-10 rounded-md  hidden md:block ${style} ${isVisible ? 'block' : 'hidden'} ${isWhiteText ? 'bg-[#03045E] text-white' : 'bg-white text-black'}`;
 
     return (
         <motion.button
@@ -15,6 +15,7 @@ const Button = ({ value, isVisible, isWhiteText , }) => {
           ease: 'easeInOut',
         }}
         className={buttonClasses}>
+        
             {value}
         </motion.button>
     );

@@ -27,6 +27,33 @@ Increasing profits during off-boarding with an efficient workforce via prepaid i
 This approach allows for better financial planning and resource allocation, potentially leading to increased profitability for the company. It streamlines the off-boarding process, ensuring a more efficient transition for both the organization and the departing employees</p>
          </div>
      </div>
+     <div className=" relative flex flex-col   items-center  w-screen  justify-center p-32 bg-[#FFFFFF]  ">
+                <div className='flex justify-center items-center gap-3'>
+
+                    <h1 className='font-heading text-[#03045E] font-bold     text-[20px]'>Our Process</h1>
+                </div>
+                <div className='flex gap-10 mt-10'>
+                   
+                        <div className='w-60 h-48 bg-[#b2aeae] flex justify-center items-center'>
+
+
+                        </div>
+                        <div className='w-60 h-48 bg-[#b2aeae] flex justify-center items-center'>
+
+
+                        </div>
+                        <div className='w-60 h-48 bg-[#b2aeae] flex justify-center items-center'>
+
+
+                        </div>
+                   
+
+                </div>
+                
+            </div>
+            <div className='bg-white h-[35rem]'>
+
+            </div>
       <Footer />
       </motion.div>
     </>
